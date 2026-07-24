@@ -236,6 +236,6 @@ def run_web():
     web_app.run(host="0.0.0.0", port=port)
 
 
-threading.Thread(target=run_web).start()
+threading.Thread(target=run_web, daemon=True).start()
 
 app.run_polling()
